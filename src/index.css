@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.board {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.board-buffer{
+	flex-grow: 1;
+}
+.board-space {
+	flex-grow: 2;
+}
+.board-row {
+	margin-left: auto;
+	font-size: 0px;
+	display:flex;
+	justify-content: space-around;
+	line-height:30px;
+}
+
+
+.square {
+	margin: 0;
+    flex: 1 0 auto;
+    height: auto;
+	border: 2px solid;
+}
+.square:before {
+    content:'';
+    float:left;
+    padding: 50% 0;
+}
+
+.square.palace-l {
+  background: linear-gradient(to top right, #fff calc(50% - 2px), #000, #fff calc(50% + 2px) )
+}
+
+.square.palace-r {
+  background: linear-gradient(to top left, #fff calc(50% - 2px), #000, #fff calc(50% + 2px) )
+}
+
+
+.river {
+	height: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-left: 2px solid;
+	border-right: 2px solid;
+}
+.river-p {
+	font-size: 32px;
+}
+.pos {
+	display: none;
+}
+
